@@ -9,7 +9,11 @@ RUN apt-get update \
     && apt-get install -y \
     wget \
     curl \
+    nano \
+    apt-utils \
+    net-utils \
     cron \
+    run-one \
     redis \
     git \
     python3-pip \
