@@ -28,13 +28,12 @@ RUN apt-get update \
     && wget https://csufcs.com/tuffixize -O - | bash \
     && rm -rf /var/lib/apt/lists/*
 
+
+COPY requirements.txt requirements.txt
+
 # Python dependencies
 RUN ln -s /usr/bin/python3 /usr/bin/python \
-    && python -m pip install \
-    fastapi[all] \
-    sqlite-utils \
-    pyinstaller \
-    httpx
+    && python -m pip install -r requirements.txt
 
 RUN mkdir /home/projects
 
