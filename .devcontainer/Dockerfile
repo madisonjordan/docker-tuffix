@@ -11,7 +11,7 @@ RUN apt-get update \
     curl \
     nano \
     apt-utils \
-    net-utils \
+    net-tools \
     cron \
     run-one \
     redis \
