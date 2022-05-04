@@ -1,0 +1,38 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.231.6/containers/ubuntu
+{
+  "name": "tuffix",
+  // import pre-built image
+  "image": "ghcr.io/madisonjordan/tuffix:backend2022",
+  "features": {
+    "github-cli": "latest",
+    "sshd": "latest"
+  },
+
+  //build image from dockerfile instead
+  //"build": {
+  //  "dockerfile": "Dockerfile"
+  //},
+
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/tuffix/.ssh,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder},target=/home/projects,type=bind,consistency=cached"
+  ],
+  "workspaceFolder": "/home/projects",
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": []
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+}
