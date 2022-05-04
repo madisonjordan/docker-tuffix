@@ -9,7 +9,9 @@ based on [VS Code Remote-Containers Docs](https://code.visualstudio.com/docs/rem
 _don't need to pull image_
 
 1. copy `.devcontainer` folder to same directory that also contains projects folders to mount
-2. use `Remote-Containers: Reopen in Container` etc from VS Code Remote Extension
+2. from VS Code > Open Folder. Open the folder containing .devcontainer from step 1
+3. use `Remote-Containers: Reopen in Container` etc from VS Code Remote Extension
+   _note: it should prompt you with a notification to reopen in the container when you are in the folder in step 2_
 
 ## Building / Running without VS Code
 
