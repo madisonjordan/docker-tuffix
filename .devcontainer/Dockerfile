@@ -13,6 +13,7 @@ RUN apt-get update \
     nano \
     apt-utils \
     iproute2 \
+    psmisc \
     cron \
     run-one \
     redis \
